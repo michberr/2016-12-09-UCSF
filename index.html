@@ -7,12 +7,12 @@ address: "Mission Hall rm 1401/1402, 550 16th Street, San Francisco, CA 94143"  
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "37.767417, -122.390322"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "Dec 9-10, 2016"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "December 9-10, 2016"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2016-12-09      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2016-12-10        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Michelle Berry", "Nora Mitchell"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Tbd"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: ["michberr8@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 etherpad:             # optional: URL for the workshop Etherpad if there is one
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -47,10 +47,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template.  Use it to create your own website.
-Delete these lines and please fill in 
-<a href="{{site.amy_site}}/submit">this self-organized workshop form</a>
-and the administrator will contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -66,8 +62,9 @@ and the administrator will contact you if we need any extra information.</h4>
   time and with less pain by teaching them basic lab skills for
   scientific computing.  This hands-on workshop will cover basic
   concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
-  help one another and to apply what they have learned to their own
+  management, and task automation.  The focus of this workshop will be on
+  working with biological and sequence data, but it will not be a "how to analyze your RNASeq data" tutorial.
+  Participants will be encouraged to help one another and to apply what they have learned to their own
   research problems.
 </p>
 <p align="center">
@@ -86,7 +83,7 @@ and the administrator will contact you if we need any extra information.</h4>
 -->
 <p id="who">
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The course is aimed at life science researchers (e.g., students, postdocs, research staff, faculty) from UCSF.  
   <strong>You don't need to have any previous knowledge of the tools that will
     be presented at the workshop.</strong>
 </p>
@@ -194,10 +191,10 @@ and the administrator will contact you if we need any extra information.</h4>
   <div class="col-md-6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
+      <tr> <td>09:00</td>  <td><a href="http://swcarpentry.github.io/shell-novice/">Automating tasks with the Unix shell</a></td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Exploring data with R</td> </tr>
+      <tr> <td>13:00</td>  <td><a href="http://www.datacarpentry.org/R-genomics/">Introduction to R</a></td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -205,10 +202,10 @@ and the administrator will contact you if we need any extra information.</h4>
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Running analysis and building plots with R</td> </tr>
+      <tr> <td>09:00</td>  <td><a href="http://www.datacarpentry.org/R-genomics/">Data analysis and visualization in R</a></td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Version control with Git/Github</td> </tr>
+      <tr> <td>13:00</td>  <td><a href="http://swcarpentry.github.io/git-novice/">Version control with Git/Github</a></td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -260,19 +257,19 @@ and the administrator will contact you if we need any extra information.</h4>
 
 
 <div class="row">
-  <!--
   <div class="col-md-6">
     <h3 id="syllabus-shell">The Unix Shell</h3>
     <ul>
       <li>Files and directories</li>
       <li>History and tab completion</li>
       <li>Pipes and redirection</li>
-      <li>Looping over files</li>
       <li>Creating and running shell scripts</li>
       <li>Finding things</li>
       <li><a href="{{site.swc_pages}}/shell-novice/reference/">Reference...</a></li>
     </ul>
   </div>
+
+<!--
   <div class="col-md-6">
     <h3 id="syllabus-python">Programming in Python</h3>
     <ul>
@@ -291,10 +288,10 @@ and the administrator will contact you if we need any extra information.</h4>
     <h3 id="syllabus-r">Programming in R</h3>
     <ul>
       <li>Working with vectors and data frames</li>
-      <li>Reading and plotting data</li>
       <li>Creating and using functions</li>
       <li>Loops and conditionals</li>
-      <li>Using R from the command line</li>
+      <li>Aggregating and analyzing data with with dplyr</li>
+      <li>Data visualization with ggplot2</li>
       <li><a href="{{site.swc_pages}}/r-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
@@ -318,14 +315,11 @@ and the administrator will contact you if we need any extra information.</h4>
   <div class="col-md-6">
     <h3 id="syllabus-git">Version Control with Git</h3>
     <ul>
+      <li>Why use version control?</li>
       <li>Creating a repository</li>
       <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
       <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
+      <li>Working with code on Github: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
       <li><a href="{{site.swc_pages}}/git-novice/reference/">Reference...</a></li>
     </ul>
   </div>
@@ -583,11 +577,10 @@ and the administrator will contact you if we need any extra information.</h4>
   </div>
 </div> <!-- End of 'editor' section. -->
 <!--
-<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
+<div id="python"> Start of 'Python' section. Remove the third paragraph if
            the workshop will teach Python using something other than
            the IPython notebook.
            Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
--->
 <!--
   <h3>Python</h3>
 
@@ -671,8 +664,9 @@ and the administrator will contact you if we need any extra information.</h4>
   please go to <a href="setup/index.html">this page</a>,
   which has instructions on how to test that everything was installed correctly.
   </p>
+</div>
 -->
-</div> <!-- End of 'Python' section. -->
+ <!-- End of 'Python' section. -->
 
 <div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
